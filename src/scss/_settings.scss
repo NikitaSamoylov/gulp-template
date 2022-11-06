@@ -6,11 +6,13 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 .page {
   height: 100%;
-  font-family: var(--font-family, sans-serif);
+  font-family: $font-family, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -39,20 +41,22 @@ a {
   display: none !important; /* stylelint-disable-line declaration-no-important */
 }
 
-.btn-reset {
+.btn {
   border: none;
   padding: 0;
   background: transparent;
   cursor: pointer;
 }
 
-.list-reset {
-  list-style: none;
-  margin: 0;
+li {
+  list-style-type: none;
+  padding: 0;
+}
+ul {
   padding: 0;
 }
 
-.input-reset {
+input {
   -webkit-appearance: none;
   appearance: none;
   border: none;
@@ -80,8 +84,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: var(--container-width);
+  padding: 0 $container-offset;
+  max-width: $container-width;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
